@@ -1,0 +1,7 @@
+"0","library(here)"
+"2","here() starts at C:/Users/charl/OneDrive/Documentos/University of Aberdeen/Introduction to Health Data Science/GITHUB/HDS_RStudio_Repo_oefeningencursus
+"
+"0","fev_data <- read_csv(here(""fev.csv""))"
+"2","Fehler in read_csv(here(""fev.csv"")) : 
+  konnte Funktion ""read_csv"" nicht finden
+"
