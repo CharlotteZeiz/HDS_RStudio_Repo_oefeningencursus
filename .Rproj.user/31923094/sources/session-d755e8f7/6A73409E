@@ -3,7 +3,7 @@
     "path": "~/University of Aberdeen/Introduction to Health Data Science/GITHUB/HDS_RStudio_Repo_oefeningencursus/R_read-data.Rmd",
     "project_path": "R_read-data.Rmd",
     "type": "r_markdown",
-    "hash": "888179516",
+    "hash": "1971893084",
     "contents": "",
     "dirty": false,
     "created": 1729690302975.0,
@@ -13,15 +13,15 @@
         "source_window_id": "",
         "Source": "Source",
         "last_setup_crc32": "d755e8f7bb338d19",
-        "cursorPosition": "150,6",
-        "scrollLine": "130"
+        "cursorPosition": "153,9",
+        "scrollLine": "126"
     },
     "folds": "",
-    "lastKnownWriteTime": 1729692862,
+    "lastKnownWriteTime": 1729693964,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1729692862986,
+    "last_content_update": 1729693991199,
     "read_only": false,
     "read_only_alternatives": []
 }

@@ -158,13 +158,13 @@ View(psa)
 Use a few of them when you read in fev.csv and look at the data, is that what you expected?
 
 ```{r}
-# Add your code here!
+
 ```
 
 --> Apply the summary function to a tibble. What does it do?
 
 ```{r}
-# Add your code here!
+
 ```
 
 
