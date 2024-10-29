@@ -1,0 +1,6 @@
+"0","gender_eq5d <- hip_data %>% "
+"0","  select(`Gender`,`Pre.Op.Q.EQ5D.Index`,`Post.Op.Q.EQ5D.Index`) %>% "
+"0","  rename(EQ5D_Pre = `Pre.Op.Q.EQ5D.Index`,"
+"0","         EQ5D_Post = `Post.Op.Q.EQ5D.Index`"
+"0","         )"
+"0","head(gender_eq5d)"

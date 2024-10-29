@@ -1,0 +1,8 @@
+"0","stroke_data <- hip_data %>%"
+"0","  select(Stroke) %>% "
+"0","  group_by(Stroke) %>% "
+"0","  count(Stroke)"
+"0",""
+"0","stroke_data$Stroke <- factor(stroke_data$Stroke, labels=c(""yes"",""missing""))"
+"0",""
+"0","head(stroke_data)"

@@ -1,0 +1,6 @@
+"0","activity_data <- hip_data %>% "
+"0","  select(`Pre.Op.Q.Activity`,`Post.Op.Q.Activity`) %>% "
+"0","  rename(Activity_Pre =`Pre.Op.Q.Activity`,"
+"0","         Activity_Post =`Post.Op.Q.Activity`"
+"0","         )"
+"0","head(activity_data)"

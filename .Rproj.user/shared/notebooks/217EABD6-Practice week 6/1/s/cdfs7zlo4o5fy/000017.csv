@@ -1,0 +1,3 @@
+"0","tidy_gender_eq5d_noNa$Gender <- factor(tidy_gender_eq5d_noNa$Gender, labels=c(""male"",""female""))"
+"0",""
+"0","head(tidy_gender_eq5d_noNa)"
