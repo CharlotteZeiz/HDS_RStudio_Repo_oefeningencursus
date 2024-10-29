@@ -1,0 +1,5 @@
+"0","tidy_age_EQ5D_noNa$Time <- factor(tidy_age_EQ5D_noNa$Time, levels = c('Pre','Post'))"
+"0",""
+"0","tidy_age_EQ5D_noNa %>% "
+"0","  ggplot() +"
+"0","  geom_boxplot(aes(x = Time, y = EQ5D, colour = Age))"

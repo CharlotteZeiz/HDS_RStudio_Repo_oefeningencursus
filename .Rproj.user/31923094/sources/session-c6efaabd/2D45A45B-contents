@@ -1,0 +1,86 @@
+---
+title: "hip_replacement_operations"
+author: "Sophie Charlotte Zeiz"
+date: "2024-10-29"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Aim
+
+Plot 'EQ-5D Index' scores...
+
+## Load packages
+```{r load-packages}
+library(tidyverse)
+```
+## Read in data
+The data is in the file "hip replacement"...
+```{r read-data}
+hip_data <- read_csv("Hip Replacement CCG 1819.csv")
+```
+
+
+## Prepare the data
+
+```{r inspec-data}
+glimpse(hip_data)
+```
+## Select age and quality of life score pre and post operation
+```{r}
+age_EQ5D <- hip_data %>% 
+  select(`Age Band`,`Pre-Op Q EQ5D Index`, `Post-Op Q EQ5D Index`) %>% 
+  rename(Age = `Age Band`,
+         EQ5D_Pre = `Pre-Op Q EQ5D Index`,
+         EQ5D_Post = `Post-Op Q EQ5D Index`
+         )
+head(age_EQ5D)
+```
+## Remove missing values
+```{r missing-values}
+age_EQ5D$Age %>% unique()
+age_EQ5D$Age %>% table()
+age_EQ5D %>% summary()
+
+age_EQ5D_noNa <- age_EQ5D %>% 
+  drop_na() %>% 
+  filter(Age !='*')
+
+table(age_EQ5D_noNa$Age)
+summary(age_EQ5D_noNa)
+```
+## Check that data is tidy
+```{r tidy data}
+head(age_EQ5D_noNa)
+
+tidy_age_EQ5D_noNa <- age_EQ5D_noNa %>% 
+  pivot_longer(c(EQ5D_Pre, EQ5D_Post),
+               names_to = 'Time',
+               names_prefix = 'EQ5D_',
+               values_to = 'EQ5D'
+               )
+
+head(tidy_age_EQ5D_noNa)
+```
+
+
+## Plot quality of life pre and post operation for each age group
+
+```{r plot-EQ5D}
+tidy_age_EQ5D_noNa$Time <- factor(tidy_age_EQ5D_noNa$Time, levels = c('Pre','Post'))
+
+tidy_age_EQ5D_noNa %>% 
+  ggplot() +
+  geom_boxplot(aes(x = Time, y = EQ5D, colour = Age))
+```
+
+
+
+
+
+
